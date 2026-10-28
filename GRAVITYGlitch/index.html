@@ -1,0 +1,111 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#090610">
+  <meta name="description" content="Gravity Glitch is a neon platform game about jumping, timing, and survival.">
+  <title>GRAVITY GLITCH — Break the Fall</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand">
+        GRAVITY<span> GLITCH</span>
+        <small>TRUST NOTHING. TIME EVERYTHING.</small>
+      </div>
+      <div class="hud">
+        <span id="worldLabel">WORLD 1 · THE FORGOTTEN GATE</span>
+        <span id="levelLabel">LEVEL 1 / 5</span>
+      </div>
+      <button id="musicBtn" class="icon-btn" aria-label="Toggle music">♫ MUSIC ON</button>
+    </header>
+
+    <section class="game-frame">
+      <canvas id="game" aria-label="Gravity Glitch platform game"></canvas>
+
+      <div id="menuScreen" class="screen">
+        <div class="portal"></div>
+        <p class="eyebrow">A JUMPING CHALLENGE ABOUT TIMING AND SURVIVAL</p>
+        <h1>GRAVITY<span> GLITCH</span></h1>
+        <p class="tagline">REACH THE PORTAL. DODGE THE TRAPS. LEARN EACH PATTERN.</p>
+
+        <div class="menu-stats">
+          <span>5 WORLDS</span><i></i>
+          <span>25 LEVELS</span><i></i>
+          <span>5 LIVES / LEVEL</span>
+        </div>
+
+        <button id="startBtn" class="main-btn">START RUN <b>↗</b></button>
+
+        <div class="how-to-play">
+          <strong>HOW TO PLAY</strong>
+          <span>1. Move across the platforms.</span>
+          <span>2. Jump over gaps and glowing spikes.</span>
+          <span>3. Watch moving hazards and use checkpoints.</span>
+          <span>4. Reach the portal before losing all 5 lives.</span>
+        </div>
+
+        <p class="tiny">
+          Every world adds a harder obstacle pattern.
+          Each retry keeps the same layout, so you can learn from mistakes.
+        </p>
+
+        <p class="menu-tip">
+          MOVE: A / D OR ARROWS
+          <span>•</span> JUMP: SPACE
+          <span>•</span> WATCH THE FLOOR
+        </p>
+      </div>
+
+      <div id="pauseScreen" class="screen hidden">
+        <p class="eyebrow">TAKE A BREATH</p>
+        <h2>PAUSED</h2>
+        <button id="resumeBtn" class="main-btn">RESUME</button>
+        <button id="menuBtn" class="sub-btn">RETURN TO MENU</button>
+      </div>
+
+      <div id="resultScreen" class="screen hidden">
+        <p id="resultEyebrow" class="eyebrow">RUN ENDED</p>
+        <h2 id="resultTitle">YOU FELL</h2>
+        <p id="resultText">The void is patient.</p>
+        <button id="continueBtn" class="main-btn">TRY AGAIN</button>
+        <button id="resultMenuBtn" class="sub-btn">MAIN MENU</button>
+      </div>
+    </section>
+
+    <footer class="bottom-bar">
+      <div class="status">
+        <span class="pulse"></span>
+        <span id="statusText">READY WHEN YOU ARE</span>
+      </div>
+      <div class="keyboard-help">
+        KEYBOARD: <b>← →</b> MOVE
+        <b>SPACE / ↑</b> JUMP <b>ESC</b> PAUSE
+      </div>
+      <button id="pauseBtn" class="icon-btn">Ⅱ PAUSE</button>
+    </footer>
+
+    <nav class="mobile-controls" aria-label="Touch controls">
+      <div class="move-controls">
+        <button id="leftBtn" class="control-btn" aria-label="Move left">◀</button>
+        <button id="rightBtn" class="control-btn" aria-label="Move right">▶</button>
+      </div>
+      <button id="jumpBtn" class="control-btn jump-btn" aria-label="Jump">
+        JUMP <span>⤒</span>
+      </button>
+    </nav>
+
+    <p class="mobile-note">
+      Touch controls appear below the game on phones.
+      Rotate to landscape for more room.
+    </p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
